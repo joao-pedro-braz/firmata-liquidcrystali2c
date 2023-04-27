@@ -14,7 +14,7 @@ Metacello new
 
 ## How to use
 
-Most of this implementation is based off [johnrickman's LiquidCrystalI2C library](https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/), which in turn is based off [Arduino's LiquidCrystal library](https://www.arduino.cc/reference/en/libraries/liquidcrystal/). Because I made sure to keep the APIs as compatible as possible, if you have any questions that aren't covered here, go check them out, chances are whatever you need to do have a compatible example there!
+Most of this implementation is based on [johnrickman's LiquidCrystalI2C library](https://www.arduino.cc/reference/en/libraries/liquidcrystal-i2c/), which in turn is based on [Arduino's LiquidCrystal library](https://www.arduino.cc/reference/en/libraries/liquidcrystal/). This library was made to be as compatible as possible to these other references. If you have any questions that aren't covered here, go check them out, chances are whatever you need to do have a compatible example there!
 
 One can initiate a connection to the I2C-enabled LCD panel by doing:
 ```
@@ -26,7 +26,7 @@ firmataLcd init.
 We first need an instance of Firmata, which we get by calling `Firmata class>>#onPort:baudRate:`, after that we can send the         extension message `Firmata>>#lcdAt:withColumns:andRows:` to said instance (with the address, number of columns and number of rows your LCD panel has) and get back a `FirmataLiquidCrystalI2C`, which is the     main class of this package.
 Remember to call `FirmataLiquidCrystalI2C>>#init` to ready the LCD panel (See also `FirmataLiquidCrystalI2C>>#init:` and `FirmataLiquidCrystalI2C>>#begin`).
 
-With the LCD panel initiated, the World's your oyster.
+With the LCD panel initiated, the world's your oyster.
 You can then do things like:
 
 - Print 'Hello World':
